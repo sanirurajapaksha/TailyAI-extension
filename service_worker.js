@@ -18,6 +18,7 @@ try {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  console.log("Firebase Initialized");
 } catch (e) {
   //error
   console.log(e);
