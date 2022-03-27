@@ -4,6 +4,7 @@ import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import replace from "@rollup/plugin-replace";
 import resolve from "@rollup/plugin-node-resolve";
+import postcss from "rollup-plugin-postcss";
 
 import {
   chromeExtension,
@@ -21,7 +22,19 @@ export default {
     format: "esm",
     chunkFileNames: path.join("chunks", "[name]-[hash].js"),
   },
+
   plugins: [
+    postcss({
+      config: {
+        path: "./postcss.config.js",
+      },
+      extensions: [".css"],
+      minimize: true,
+      inject: {
+        insertAt: "top",
+      },
+    }),
+
     chromeExtension(),
     // Adds a Chrome extension reloader during watch mode
     simpleReloader(),
