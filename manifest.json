@@ -1,0 +1,19 @@
+{
+  "name": "TailyAI",
+  "description": "Write Email using AI",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": ["*://mail.google.com/*"],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
