@@ -1,6 +1,6 @@
 semi: false
 tabWidth: 2
 trailingComma: 'all'
-singleQuote: true
+singleQuote: false
 arrowParens: 'always'
 proseWrap: 'always'
