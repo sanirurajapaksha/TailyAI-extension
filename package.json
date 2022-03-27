@@ -2,8 +2,9 @@
   "name": "tailyai",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Write Emails using AI",
-  "proxy":"https://mail.google.com",
+  "proxy": "https://mail.google.com",
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",

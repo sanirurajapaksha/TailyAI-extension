@@ -1,6 +1,6 @@
 import path from 'path'
 
-import babel from '@rollup/plugin-babel'
+import { babel } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
@@ -16,7 +16,7 @@ export default {
   output: {
     dir: 'dist',
     format: 'esm',
-    chunkFileNames: path.join('chunks','[name]-[hash].js'),
+    chunkFileNames: path.join('chunks', '[name]-[hash].js'),
   },
   plugins: [
     chromeExtension(),
