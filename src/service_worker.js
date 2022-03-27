@@ -1,15 +1,6 @@
 import { initializeApp } from 'firebase/app'
 
-//Service Worker Catch Any Errors...
 try {
-  //Import Firebase Local importScripts
-  // These are firebase version 8.0.0
-  // self.importScripts(
-  //   "firebase/firebase-app.js",
-  //   "firebase/firebase-auth.js",
-  //   "firebase/firebase-database.js"
-  // );
-
   // Your web app's Firebase configuration
   const firebaseConfig = {
     apiKey: 'AIzaSyDWQxDBidHNWUOIoc2C-UllBK389TUuQxw',
