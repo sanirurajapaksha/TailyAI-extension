@@ -1,6 +1,7 @@
 //Service Worker Catch Any Errors...
 try {
-  //Import Firebase Local Scripts
+  //Import Firebase Local importScripts
+  // These are firebase version 8.0.0
   self.importScripts(
     "firebase/firebase-app.js",
     "firebase/firebase-auth.js",
