@@ -1,12 +1,13 @@
-import { initializeApp } from "firebase/app";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-} from "firebase/auth";
+// import { initializeApp } from "firebase/app";
+// import {
+//   getAuth,
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   signOut,
+//   onAuthStateChanged,
+// } from "firebase/auth";
 
+self.importScripts("firebase/firebase-app.js", "firebase/firebase-auth.js");
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDWQxDBidHNWUOIoc2C-UllBK389TUuQxw",
@@ -17,18 +18,16 @@ const firebaseConfig = {
   appId: "1:882038101179:web:9e9c2318bf8e7d6bf1459e",
 };
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+firebase.initializeApp(firebaseConfig);
 
-const user = auth.currentUser;
+const user = firebase.auth().currentUser;
 if (user) {
   console.log("User logged in");
 } else {
   console.log("User not logged in");
-  if (typeof window !== "undefined") {
-    window.document.getElementById("#moon").innerHTML =
-      "<div>hello motherfucker</div>";
-  }
+  //   if (typeof window !== "undefined") {
+  //     window.document.getElementById("#moon").innerHTML =
+  //       "<div>hello motherfucker</div>";
 }
 
 const createUser = () => {};
