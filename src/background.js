@@ -25,8 +25,12 @@ if (user) {
   console.log("User logged in");
 } else {
   console.log("User not logged in");
+  document.getElementById(".span#moon").innerHTML = "User not logged in";
+  //   if (typeof window !== "undefined") {
+  //     window.location.replace("./test.html");
+  //   }
 }
 
 const createUser = () => {};
 const signIn = () => {};
-const signOut = () => {};
+const signOut1 = () => {};
