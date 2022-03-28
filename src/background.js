@@ -25,10 +25,10 @@ if (user) {
   console.log("User logged in");
 } else {
   console.log("User not logged in");
-  document.getElementById(".span#moon").innerHTML = "User not logged in";
-  //   if (typeof window !== "undefined") {
-  //     window.location.replace("./test.html");
-  //   }
+  if (typeof window !== "undefined") {
+    window.document.getElementById("#moon").innerHTML =
+      "<div>hello motherfucker</div>";
+  }
 }
 
 const createUser = () => {};
