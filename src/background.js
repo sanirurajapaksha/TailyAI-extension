@@ -26,3 +26,7 @@ if (user) {
 } else {
   console.log("User not logged in");
 }
+
+const createUser = () => {};
+const signIn = () => {};
+const signOut = () => {};
