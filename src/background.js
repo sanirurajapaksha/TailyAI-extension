@@ -21,10 +21,16 @@ if ("function" === typeof importScripts) {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  const user = firebase.auth().currentUser;
+
   self.addEventListener("message", function (event) {
     self.clients.matchAll().then((all) =>
       all.forEach((client) => {
-        client.postMessage("Responding to " + event.data);
+        if (user) {
+          client.postMessage("User is logged in");
+        } else {
+          client.postMessage("User is not logged in");
+        }
       })
     );
   });
