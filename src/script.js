@@ -15,8 +15,8 @@
   // Are we being controlled?
   if (navigator.serviceWorker.controller) {
     // Yes, send our controller a message.
-    console.log("Sending 'hi' to controller");
-    navigator.serviceWorker.controller.postMessage("hi");
+    console.log("Checking if user is logged in");
+    navigator.serviceWorker.controller.postMessage("duck you");
   } else {
     // No, register a service worker to control pages like us.
     // Note that it won't control this instance of this page, it only takes effect

@@ -24,15 +24,19 @@ if ("function" === typeof importScripts) {
   const user = firebase.auth().currentUser;
 
   self.addEventListener("message", function (event) {
-    self.clients.matchAll().then((all) =>
-      all.forEach((client) => {
-        if (user) {
-          client.postMessage("User is logged in");
-        } else {
-          client.postMessage("User is not logged in");
-        }
-      })
-    );
+    if (event.data === "hi") {
+      self.clients.matchAll().then((all) =>
+        all.forEach((client) => {
+          if (user) {
+            client.postMessage("User is logged in");
+          } else {
+            client.postMessage("User is not logged in");
+          }
+        })
+      );
+    } else {
+      console.log("wrong command: " + event.data);
+    }
   });
 
   const createUser = () => {};
