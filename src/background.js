@@ -35,7 +35,11 @@ if ("function" === typeof importScripts) {
         })
       );
     } else {
-      console.log("wrong command: " + event.data);
+      self.clients.matchAll().then((all) =>
+        all.forEach((client) => {
+          client.postMessage("wrong command");
+        })
+      );
     }
   });
 
