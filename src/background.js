@@ -25,7 +25,7 @@ if ("function" === typeof importScripts) {
     self.clients.matchAll().then((all) =>
       all.forEach((client) => {
         client.postMessage("Responding to " + event.data);
-      }),
+      })
     );
   });
 
