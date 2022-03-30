@@ -13,7 +13,6 @@ if ("function" === typeof importScripts) {
   firebase.initializeApp(firebaseConfig);
 
   const user1 = firebase.auth().currentUser;
-  const provider = new firebase.auth.GoogleAuthProvider();
 
   self.addEventListener("message", function (event) {
     if (event.data === "checkAuth") {
