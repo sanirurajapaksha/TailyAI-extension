@@ -35,7 +35,7 @@
       return;
     } else if (event.data === true) {
       document.getElementById("moon").innerHTML =
-        "Here's a 🌕 for you, cuz you are logged in 😊";
+        "Start Using TailyAI right now! Go to Gmail and generate emails using TailyAI.";
       return;
     }
   });
