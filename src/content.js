@@ -96,6 +96,11 @@ const sendTextToServer2 = async () => {
 
 setInterval(() => {
   if (document.readyState === "complete") {
+    window.addEventListener("message", (event) => {
+      if (event.origin === "script.js") {
+        console.log("received message from script.js");
+      }
+    });
     const textbox1 = document.querySelector("div.AD");
     const textbox2 = document.querySelector("div.ip.adB");
     if (textbox1 !== null && isButtonAdded1 === false) {
