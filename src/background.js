@@ -12,25 +12,42 @@ if ("function" === typeof importScripts) {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  const user = firebase.auth().currentUser;
+  const user1 = firebase.auth().currentUser;
+  const provider = new firebase.auth.GoogleAuthProvider();
 
   self.addEventListener("message", function (event) {
-    if (event.data === "hi") {
+    if (event.data === "checkAuth") {
       self.clients.matchAll().then((all) =>
         all.forEach((client) => {
-          if (user) {
+          if (user1) {
             client.postMessage(true);
           } else {
             client.postMessage(false);
           }
         })
       );
-    } else {
-      self.clients.matchAll().then((all) =>
-        all.forEach((client) => {
-          client.postMessage("wrong command");
+    } else if (event.data === "login") {
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          // const token = result.credential.accessToken;
+          // The signed-in user info.
+          const user = result.user;
+          self.clients.matchAll().then((all) =>
+            all.forEach((client) => {
+              client.postMessage(user);
+            })
+          );
         })
-      );
+        .catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorMessage);
+          // ...
+        });
     }
   });
 

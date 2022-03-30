@@ -1,7 +1,8 @@
 (function () {
   "use strict";
 
-  console.log("TailyAI-extension: script.js");
+  //   console.log("TailyAI-extension: script.js");
+
   if (!navigator.serviceWorker || !navigator.serviceWorker.register) {
     console.log("This browser doesn't support service workers");
     return;
@@ -10,8 +11,8 @@
   // Are we being controlled?
   if (navigator.serviceWorker.controller) {
     // Yes, send our controller a message.
-    console.log("Checking if user is logged in");
-    navigator.serviceWorker.controller.postMessage("checkAuth");
+    console.log("Logging in");
+    navigator.serviceWorker.controller.postMessage("login");
   } else {
     // No, register a service worker to control pages like us.
     // Note that it won't control this instance of this page, it only takes effect
@@ -30,12 +31,9 @@
 
   // Listen to messages from service workers.
   navigator.serviceWorker.addEventListener("message", function (event) {
-    if (event.data === false) {
-      window.location.replace("login.html");
+    if (event.data) {
       return;
-    } else if (event.data === true) {
-      document.getElementById("moon").innerHTML =
-        "Here's a 🌕 for you, cuz you are logged in 😊";
+    } else {
       return;
     }
   });
