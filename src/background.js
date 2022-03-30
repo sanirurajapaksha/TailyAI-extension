@@ -12,13 +12,13 @@ if ("function" === typeof importScripts) {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  const user1 = firebase.auth().currentUser;
+  const user = firebase.auth().currentUser;
 
   self.addEventListener("message", function (event) {
     if (event.data === "checkAuth") {
       self.clients.matchAll().then((all) =>
         all.forEach((client) => {
-          if (user1) {
+          if (user) {
             client.postMessage(true);
           } else {
             client.postMessage(false);
