@@ -1,22 +1,16 @@
 (function () {
   "use strict";
 
-  console.log("TailyAI-extension: script.js");
   if (!navigator.serviceWorker || !navigator.serviceWorker.register) {
     console.log("This browser doesn't support service workers");
     return;
   }
 
-  // Listen to messages from service workers.
-  navigator.serviceWorker.addEventListener("message", function (event) {
-    console.log("Got reply from service worker: " + event.data);
-  });
-
   // Are we being controlled?
   if (navigator.serviceWorker.controller) {
     // Yes, send our controller a message.
     console.log("Checking if user is logged in");
-    navigator.serviceWorker.controller.postMessage("duck you");
+    navigator.serviceWorker.controller.postMessage("hi");
   } else {
     // No, register a service worker to control pages like us.
     // Note that it won't control this instance of this page, it only takes effect
@@ -32,4 +26,16 @@
         console.log("Service worker registration failed: " + error.message);
       });
   }
+
+  // Listen to messages from service workers.
+  navigator.serviceWorker.addEventListener("message", function (event) {
+    if (event.data === false) {
+      window.location.replace("test.html");
+      return;
+    } else if (event.data === true) {
+      document.getElementById("moon").innerHTML =
+        "Here's a 🌕 for you, cuz you are logged in 😊";
+      return;
+    }
+  });
 })();

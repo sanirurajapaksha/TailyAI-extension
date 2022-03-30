@@ -1,12 +1,3 @@
-// import { initializeApp } from "firebase/app";
-// import {
-//   getAuth,
-//   createUserWithEmailAndPassword,
-//   signInWithEmailAndPassword,
-//   signOut,
-//   onAuthStateChanged,
-// } from "firebase/auth";
-
 if ("function" === typeof importScripts) {
   importScripts("firebase/firebase-app.js", "firebase/firebase-auth.js");
   // Your web app's Firebase configuration
@@ -28,9 +19,9 @@ if ("function" === typeof importScripts) {
       self.clients.matchAll().then((all) =>
         all.forEach((client) => {
           if (user) {
-            client.postMessage("User is logged in");
+            client.postMessage(true);
           } else {
-            client.postMessage("User is not logged in");
+            client.postMessage(false);
           }
         })
       );
