@@ -32,11 +32,9 @@
   navigator.serviceWorker.addEventListener("message", function (event) {
     if (event.data === false) {
       window.location.replace("login.html");
-      return;
     } else if (event.data === true) {
       document.getElementById("moon").innerHTML =
         "Start Using TailyAI right now! Go to Gmail and generate emails using TailyAI.";
-      return;
     }
   });
 })();
