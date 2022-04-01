@@ -96,7 +96,7 @@ const sendTextToServer2 = async () => {
 
 setInterval(() => {
   if (document.readyState === "complete") {
-    window.addEventListener("message", (event) => {
+    self.addEventListener("message", (event) => {
       if (event.origin === "script.js") {
         console.log("received message from script.js");
       }

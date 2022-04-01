@@ -14,7 +14,7 @@ if ("function" === typeof importScripts) {
 
   const user = firebase.auth().currentUser;
 
-  self.addEventListener("message", function (event) {
+  self.addEventListener("message", (event) => {
     if (event.data === "checkAuth") {
       self.clients.matchAll().then((all) =>
         all.forEach((client) => {
