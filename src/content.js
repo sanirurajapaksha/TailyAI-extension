@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 let isButtonAdded1 = false;
 let isButtonAdded2 = false;
 
