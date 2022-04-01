@@ -32,7 +32,6 @@
   navigator.serviceWorker.addEventListener("message", function (event) {
     if (event.data === false) {
       window.location.replace("login.html");
-      postMessage(true, "content.js");
       return;
     } else if (event.data === true) {
       document.getElementById("moon").innerHTML =
