@@ -13,7 +13,7 @@ if (navigator.serviceWorker.controller) {
   // Note that it won't control this instance of this page, it only takes effect
   // for pages in its scope loaded *after* it's installed.
   navigator.serviceWorker
-    .register("background.js")
+    .register("service_worker.js")
     .then(function (registration) {
       console.log("Service worker registered, scope: " + registration.scope);
       console.log("Refresh the page to talk to it.");
