@@ -19,18 +19,4 @@ if ("function" === typeof importScripts) {
   } else {
     chrome.storage.sync.set({ userStatus: false });
   }
-
-  self.addEventListener("message", (event) => {
-    if (event.data === "checkAuth") {
-      self.clients.matchAll().then((all) =>
-        all.forEach((client) => {
-          if (user) {
-            client.postMessage(true);
-          } else {
-            client.postMessage(false);
-          }
-        })
-      );
-    }
-  });
 }

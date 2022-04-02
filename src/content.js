@@ -3,7 +3,7 @@ let isButtonAdded2 = false;
 
 const is_logged_in = () => {
   chrome.storage.sync.get(["userStatus"], (result) => {
-    console.log(result);
+    console.log(result.userStatus);
   });
 };
 
