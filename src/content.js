@@ -1,8 +1,15 @@
 let isButtonAdded1 = false;
 let isButtonAdded2 = false;
 
+let isLoggedIn;
+
 const is_logged_in = () => {
   chrome.storage.sync.get(["userStatus"], (result) => {
+    if (result.userStatus === true) {
+      isLoggedIn = true;
+    } else {
+      isLoggedIn = false;
+    }
     console.log(result.userStatus);
   });
 };
@@ -102,7 +109,7 @@ setInterval(() => {
   if (document.readyState === "complete") {
     const textbox1 = document.querySelector("div.AD");
     const textbox2 = document.querySelector("div.ip.adB");
-    if (textbox1 !== null && isButtonAdded1 === false) {
+    if (textbox1 !== null && isButtonAdded1 === false && isLoggedIn === true) {
       is_logged_in();
       const divForRoot1 = document.createElement("div");
       divForRoot1.className = "divForRoot1";
@@ -141,11 +148,7 @@ setInterval(() => {
       isButtonAdded1 = false;
     }
 
-    if (
-      textbox2 !== null &&
-      isButtonAdded2 === false &&
-      is_logged_in() === true
-    ) {
+    if (textbox2 !== null && isButtonAdded2 === false && isLoggedIn === true) {
       const divForRoot2 = document.createElement("div");
       divForRoot2.className = "divForRoot2";
       document.querySelector("div.aO7").appendChild(divForRoot2);
