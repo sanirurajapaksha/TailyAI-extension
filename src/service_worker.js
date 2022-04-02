@@ -14,6 +14,12 @@ if ("function" === typeof importScripts) {
 
   const user = firebase.auth().currentUser;
 
+  if (user) {
+    chrome.storage.sync.set({ userStatus: true });
+  } else {
+    chrome.storage.sync.set({ userStatus: false });
+  }
+
   self.addEventListener("message", (event) => {
     if (event.data === "checkAuth") {
       self.clients.matchAll().then((all) =>

@@ -29,8 +29,6 @@
   // Listen to messages from service workers.
   navigator.serviceWorker.addEventListener("message", function (event) {
     if (event.data === false) {
-      chrome.storage.sync.set({ userStatus: false });
-      console.log("User is not logged in");
       window.location.replace("login.html");
     } else if (event.data === true) {
       document.getElementById("moon").innerHTML =
