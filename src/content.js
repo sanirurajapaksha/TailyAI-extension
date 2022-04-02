@@ -3,16 +3,13 @@ let isButtonAdded2 = false;
 
 let isLoggedIn;
 
-const is_logged_in = () => {
-  chrome.storage.sync.get(["userStatus"], (result) => {
-    if (result.userStatus === true) {
-      isLoggedIn = true;
-    } else {
-      isLoggedIn = false;
-    }
-    console.log(result.userStatus);
-  });
-};
+chrome.storage.sync.get(["userStatus"], (result) => {
+  if (result.userStatus === true) {
+    isLoggedIn = true;
+  } else {
+    isLoggedIn = false;
+  }
+});
 
 const sendTextToServer1 = async () => {
   const textContent = document.querySelector(
@@ -110,7 +107,6 @@ setInterval(() => {
     const textbox1 = document.querySelector("div.AD");
     const textbox2 = document.querySelector("div.ip.adB");
     if (textbox1 !== null && isButtonAdded1 === false && isLoggedIn === true) {
-      is_logged_in();
       const divForRoot1 = document.createElement("div");
       divForRoot1.className = "divForRoot1";
       document.querySelector("div.Ar.Au").appendChild(divForRoot1);
