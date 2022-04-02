@@ -1,10 +1,6 @@
 let isButtonAdded1 = false;
 let isButtonAdded2 = false;
 
-const is_logged_in = () => {
-  return true;
-};
-
 const sendTextToServer1 = async () => {
   const textContent = document.querySelector(
     "div.Am.Al.editable.LW-avf.tS-tW"
@@ -100,11 +96,7 @@ setInterval(() => {
   if (document.readyState === "complete") {
     const textbox1 = document.querySelector("div.AD");
     const textbox2 = document.querySelector("div.ip.adB");
-    if (
-      textbox1 !== null &&
-      isButtonAdded1 === false &&
-      is_logged_in() === true
-    ) {
+    if (textbox1 !== null && isButtonAdded1 === false && userStat === true) {
       const divForRoot1 = document.createElement("div");
       divForRoot1.className = "divForRoot1";
       document.querySelector("div.Ar.Au").appendChild(divForRoot1);

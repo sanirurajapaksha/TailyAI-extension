@@ -27,8 +27,4 @@ if ("function" === typeof importScripts) {
       );
     }
   });
-
-  const createUser = () => {};
-  const signIn = () => {};
-  const signOut1 = () => {};
 }
