@@ -10,7 +10,7 @@ if ("function" === typeof importScripts) {
     appId: "1:882038101179:web:9e9c2318bf8e7d6bf1459e",
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig)
 
   const user = firebase.auth().currentUser;
 
