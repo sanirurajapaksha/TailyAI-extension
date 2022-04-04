@@ -12,7 +12,7 @@ if ("function" === typeof importScripts) {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  const user = firebase.auth().currentUser
+  const user = firebase.auth().currentUser;
 
   if (user) {
     chrome.storage.sync.set({ userStatus: true });
