@@ -2,12 +2,13 @@ if ("function" === typeof importScripts) {
   importScripts("firebase/firebase-app.js", "firebase/firebase-auth.js");
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyDWQxDBidHNWUOIoc2C-UllBK389TUuQxw",
-    authDomain: "test-cbdbf.firebaseapp.com",
-    projectId: "test-cbdbf",
-    storageBucket: "test-cbdbf.appspot.com",
-    messagingSenderId: "882038101179",
-    appId: "1:882038101179:web:9e9c2318bf8e7d6bf1459e",
+    apiKey: "AIzaSyC-zn2-KXJnAQE9FgAA_djv7bL0ZA-2uGQ",
+    authDomain: "tailyai.firebaseapp.com",
+    projectId: "tailyai",
+    storageBucket: "tailyai.appspot.com",
+    messagingSenderId: "354149931716",
+    appId: "1:354149931716:web:6d7ea5852f1d2de1850791",
+    measurementId: "G-RSP1WH7FMB",
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
