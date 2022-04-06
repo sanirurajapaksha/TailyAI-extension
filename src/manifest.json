@@ -11,6 +11,9 @@
   "background": {
     "service_worker": "service_worker.js"
   },
+  "externally_connectable": {
+    "matches": ["http://localhost:3000/"]
+  },
   "content_scripts": [
     {
       "matches": ["*://mail.google.com/*"],
