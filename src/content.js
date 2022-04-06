@@ -3,6 +3,14 @@ let isButtonAdded2 = false;
 
 let isLoggedIn;
 
+chrome.storage.sync.get(["userStatus"], (result) => {
+  if (result.userStatus === true) {
+    isLoggedIn = true;
+  } else {
+    isLoggedIn = false;
+  }
+});
+
 const sendTextToServer1 = async () => {
   const textContent = document.querySelector(
     "div.Am.Al.editable.LW-avf.tS-tW"
@@ -95,13 +103,6 @@ const sendTextToServer2 = async () => {
 };
 
 setInterval(() => {
-  chrome.storage.sync.get(["userStatus"], (result) => {
-    if (result.userStatus === true) {
-      isLoggedIn = true;
-    } else {
-      isLoggedIn = false;
-    }
-  });
   if (document.readyState === "complete") {
     const textbox1 = document.querySelector("div.AD");
     const textbox2 = document.querySelector("div.ip.adB");
