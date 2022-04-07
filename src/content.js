@@ -3,8 +3,8 @@ let isButtonAdded2 = false;
 
 let isLoggedIn;
 
-chrome.storage.sync.get(["userStatus"], (result) => {
-  if (result.userStatus === true) {
+chrome.storage.sync.get(["user"], (result) => {
+  if (result.user) {
     isLoggedIn = true;
   } else {
     isLoggedIn = false;
@@ -140,11 +140,7 @@ setInterval(() => {
       div.onclick = sendTextToServer1;
       root.appendChild(div);
       isButtonAdded1 = true;
-    } else if (
-      textbox1 === null &&
-      isButtonAdded1 === true &&
-      isLoggedIn === false
-    ) {
+    } else if (textbox1 === null && isButtonAdded1 === true) {
       isButtonAdded1 = false;
     }
 
@@ -182,11 +178,7 @@ setInterval(() => {
       div.onclick = sendTextToServer2;
       root.appendChild(div);
       isButtonAdded2 = true;
-    } else if (
-      textbox2 === null &&
-      isButtonAdded2 === true &&
-      isLoggedIn === false
-    ) {
+    } else if (textbox2 === null && isButtonAdded2 === true) {
       isButtonAdded2 = false;
     }
   }

@@ -1,5 +1,5 @@
-chrome.storage.sync.get(["userStatus"], (result) => {
-  if (result.userStatus) {
+chrome.storage.sync.get(["user"], (result) => {
+  if (result.user) {
     document.getElementById("moon").innerHTML =
       "Start Using TailyAI right now! Go to Gmail and generate emails using TailyAI.";
   } else {

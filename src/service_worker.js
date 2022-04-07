@@ -25,10 +25,10 @@
 
 chrome.runtime.onMessageExternal.addListener(
   (request, sender, sendResponse) => {
-    if (request.user) {
-      chrome.storage.sync.set({ userStatus: true });
+    if (request.user === true) {
+      chrome.storage.sync.set(request);
     } else {
-      chrome.storage.sync.set({ userStatus: false });
+      chrome.storage.sync.set(request);
     }
   }
 );
