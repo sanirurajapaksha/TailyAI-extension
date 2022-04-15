@@ -1,4 +1,4 @@
-let isButtonAdded1 = false;
+let isButtonAdded1 = false
 let isButtonAdded2 = false;
 
 let isLoggedIn;
