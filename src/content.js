@@ -12,6 +12,9 @@ chrome.storage.sync.get(["user"], (result) => {
 });
 
 const sendTextToServer1 = async () => {
+  document
+    .querySelector("div.divForRoot1")
+    .shadowRoot.querySelector("span.text-content1").innerHTML = "Loading...";
   const textContent = document.querySelector(
     "div.Am.Al.editable.LW-avf.tS-tW"
   ).textContent;
@@ -47,16 +50,27 @@ const sendTextToServer1 = async () => {
             ).textContent = data;
           }
         });
+      document
+        .querySelector("div.divForRoot1")
+        .shadowRoot.querySelector("span.text-content1").innerHTML =
+        "Generate✨";
     } catch (error) {
       window.alert(
         "Oopss! Error happened on our end. Sorry for inconvenience occured. Report this error to customer support. Error: " +
           error
       );
+      document
+        .querySelector("div.divForRoot1")
+        .shadowRoot.querySelector("span.text-content1").innerHTML =
+        "Generate✨";
     }
   }
 };
 
 const sendTextToServer2 = async () => {
+  document
+    .querySelector("div.divForRoot2")
+    .shadowRoot.querySelector("span.text-content2").innerHTML = "Loading...";
   const textContent = document.querySelector(
     "div.Am.aO9.Al.editable.LW-avf.tS-tW"
   ).textContent;
@@ -93,11 +107,19 @@ const sendTextToServer2 = async () => {
             ).textContent = data;
           }
         });
+      document
+        .querySelector("div.divForRoot2")
+        .shadowRoot.querySelector("span.text-content2").innerHTML =
+        "Generate✨";
     } catch (error) {
       window.alert(
         "Oopss! Error happened on our end. Sorry for inconvenience occured. Report this error to customer support. Error: " +
           error
       );
+      document
+        .querySelector("div.divForRoot2")
+        .shadowRoot.querySelector("span.text-content2").innerHTML =
+        "Generate✨";
     }
   }
 };
