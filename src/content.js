@@ -21,8 +21,14 @@ const sendTextToServer1 = async () => {
   const trimedText = textContent.trim();
   if (trimedText.length === 0) {
     window.alert("Please enter some text to generate email");
+    document
+      .querySelector("div.divForRoot1")
+      .shadowRoot.querySelector("span.text-content1").innerHTML = "Generate✨";
   } else if (trimedText.length > 500) {
     window.alert("Please enter less than 500 characters");
+    document
+      .querySelector("div.divForRoot1")
+      .shadowRoot.querySelector("span.text-content1").innerHTML = "Generate✨";
   } else {
     const hehe = { text: trimedText };
     const jsonifiedText = JSON.stringify(hehe);
@@ -77,8 +83,14 @@ const sendTextToServer2 = async () => {
   const trimedText = textContent.trim();
   if (trimedText.length === 0) {
     window.alert("Please enter some text to generate email");
+    document
+      .querySelector("div.divForRoot2")
+      .shadowRoot.querySelector("span.text-content2").innerHTML = "Generate✨";
   } else if (trimedText.length > 500) {
     window.alert("Please enter less than 500 characters");
+    document
+      .querySelector("div.divForRoot2")
+      .shadowRoot.querySelector("span.text-content2").innerHTML = "Generate✨";
   } else {
     const hehe = { text: trimedText };
     const jsonifiedText = JSON.stringify(hehe);
