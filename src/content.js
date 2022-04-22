@@ -151,7 +151,7 @@ setInterval(() => {
       div.innerHTML = `
       <style>
       .div1 {
-        background-color: #548EFC;
+        background-color: #10b981;
         border-radius: 20px;
         color: #FFFFFF;
         width: 108px;
@@ -164,7 +164,7 @@ setInterval(() => {
         right: 280px;
         z-index: 10;
         display: flex;
-        box-shadow: 1px 1px 6px #548EFC;
+        box-shadow: 1px 1px 6px #10b981;
         align-items: center;
         justify-content: center;
        }
@@ -189,7 +189,7 @@ setInterval(() => {
       div.innerHTML = `
       <style>
       .div2 {
-         background-color: #548EFC;
+         background-color: #10b981;
          border-radius: 20px;
          color: #FFFFFF;
          width: 108px;
@@ -202,7 +202,7 @@ setInterval(() => {
          bottom: -22px;
          z-index: 10;
          display: flex;
-         box-shadow: 1px 1px 6px #548EFC;
+         box-shadow: 1px 1px 6px #10b981;
          align-items: center;
          justify-content: center;
        }
