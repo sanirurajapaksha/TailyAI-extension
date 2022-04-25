@@ -2,10 +2,14 @@ let isButtonAdded1 = false;
 let isButtonAdded2 = false;
 
 let isLoggedIn;
+let email;
 
 chrome.storage.sync.get(["user"], (result) => {
   if (result.user) {
     isLoggedIn = true;
+    chrome.storage.sync.get(["email"], (result) => {
+      email = result.email;
+    });
   } else {
     isLoggedIn = false;
   }
@@ -40,11 +44,12 @@ const sendTextToServer1 = async () => {
       .querySelector("div.divForRoot1")
       .shadowRoot.querySelector("span.text-content1").innerHTML = "Generate✨";
   } else {
-    const hehe = { text: trimedText };
+    const hehe = { text: trimedText, email: email };
     const jsonifiedText = JSON.stringify(hehe);
     try {
       console.log("starting to post to the server");
       await fetch("http://localhost:8080/api/v1/openai", {
+        // change the url at production
         method: "POST",
         mode: "cors",
         headers: {
@@ -112,12 +117,13 @@ const sendTextToServer2 = async () => {
       .querySelector("div.divForRoot2")
       .shadowRoot.querySelector("span.text-content2").innerHTML = "Generate✨";
   } else {
-    const hehe = { text: trimedText };
+    const hehe = { text: trimedText, email: email };
     const jsonifiedText = JSON.stringify(hehe);
     console.log(jsonifiedText);
     try {
       console.log("starting to post to the server");
       await fetch("http://localhost:8080/api/v1/openai", {
+        // change the url at production
         method: "POST",
         mode: "cors",
         headers: {
