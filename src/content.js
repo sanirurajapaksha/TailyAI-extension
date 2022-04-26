@@ -65,6 +65,10 @@ const sendTextToServer1 = async () => {
             );
           } else if (data === "regenerate") {
             window.alert("Oopss! Try generating once again");
+          } else if (data === "limit_reached") {
+            window.alert(
+              "You have reached the limit of emails generated. Upgrade your plan to generate more emails"
+            );
           } else {
             document.querySelector(
               "div.Am.Al.editable.LW-avf.tS-tW"
@@ -139,6 +143,10 @@ const sendTextToServer2 = async () => {
             );
           } else if (data === "regenerate") {
             window.alert("Oopss! Try generating once again");
+          } else if (data === "limit_reached") {
+            window.alert(
+              "You have reached the limit of emails generated. Upgrade your plan to generate more emails"
+            );
           } else {
             document.querySelector(
               "div.Am.aO9.Al.editable.LW-avf.tS-tW"
