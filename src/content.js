@@ -103,6 +103,7 @@ const sendTextToServer1 = async () => {
             });
           }
         });
+
       document
         .querySelector("div.divForRoot1")
         .shadowRoot.querySelector("span.text-content1").innerHTML =
