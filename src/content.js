@@ -69,6 +69,18 @@ const sendTextToServer1 = async () => {
             window.alert(
               "You have reached the limit of emails generated. Upgrade your plan to generate more emails"
             );
+          } else if (data === "cache_empty") {
+            window.alert(
+              "Error happend in our servers. A new window will open and dissapear to resolve the issue and then try Generating again"
+            );
+            var myWindow = window.open(
+              "http://localhost:3000", // need to change in production
+              "",
+              "width=700,height=500,top=150,left=400"
+            );
+            setInterval(() => {
+              myWindow.close();
+            }, 5000);
           } else {
             document.querySelector(
               "div.Am.Al.editable.LW-avf.tS-tW"
@@ -147,6 +159,18 @@ const sendTextToServer2 = async () => {
             window.alert(
               "You have reached the limit of emails generated. Upgrade your plan to generate more emails"
             );
+          } else if (data === "cache_empty") {
+            window.alert(
+              "Error happend in our servers. A new window will open and dissapear to resolve the issue and then try Generating again"
+            );
+            var myWindow = window.open(
+              "http://localhost:3000",
+              "",
+              "width=700,height=500,top=150,left=400"
+            );
+            setInterval(() => {
+              myWindow.close();
+            }, 5000);
           } else {
             document.querySelector(
               "div.Am.aO9.Al.editable.LW-avf.tS-tW"
