@@ -82,9 +82,25 @@ const sendTextToServer1 = async () => {
               myWindow.close();
             }, 5000);
           } else {
-            document.querySelector(
+            const splitData = data.split("\n");
+            const host = document.querySelector(
               "div.Am.Al.editable.LW-avf.tS-tW"
-            ).textContent = data;
+            );
+            host.textContent = "";
+            splitData.forEach((item, index) => {
+              if (item === "" && (index === 0 || index === 1)) {
+                const new_div = document.createElement("div");
+                host.appendChild(new_div);
+              } else if (item === "") {
+                const new_div = document.createElement("div");
+                new_div.innerHTML = "<br>";
+                host.appendChild(new_div);
+              } else {
+                const new_div = document.createElement("div");
+                new_div.innerHTML = item;
+                host.appendChild(new_div);
+              }
+            });
           }
         });
       document
@@ -172,9 +188,25 @@ const sendTextToServer2 = async () => {
               myWindow.close();
             }, 5000);
           } else {
-            document.querySelector(
+            const splitData = data.split("\n");
+            const host = document.querySelector(
               "div.Am.aO9.Al.editable.LW-avf.tS-tW"
-            ).textContent = data;
+            );
+            host.textContent = "";
+            splitData.forEach((item, index) => {
+              if (item === "" && (index === 0 || index === 1)) {
+                const new_div = document.createElement("div");
+                host.appendChild(new_div);
+              } else if (item === "") {
+                const new_div = document.createElement("div");
+                new_div.innerHTML = "<br>";
+                host.appendChild(new_div);
+              } else {
+                const new_div = document.createElement("div");
+                new_div.innerHTML = item;
+                host.appendChild(new_div);
+              }
+            });
           }
         });
       document
