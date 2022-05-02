@@ -12,7 +12,7 @@
     "service_worker": "service_worker.js"
   },
   "externally_connectable": {
-    "matches": ["http://localhost:3000/"]
+    "matches": ["https://tailyai.vercel.app"]
   },
   "content_scripts": [
     {
