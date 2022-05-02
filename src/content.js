@@ -48,7 +48,7 @@ const sendTextToServer1 = async () => {
     const jsonifiedText = JSON.stringify(hehe);
     try {
       console.log("starting to post to the server");
-      await fetch("http://localhost:8080/api/v1/openai", {
+      await fetch("https://tailyai.herokuapp.com/api/v1/openai", {
         // change the url at production
         method: "POST",
         mode: "cors",
@@ -74,7 +74,7 @@ const sendTextToServer1 = async () => {
               "Error happend in our servers. A new window will open and dissapear to resolve the issue and then try Generating again"
             );
             var myWindow = window.open(
-              "http://localhost:3000", // need to change in production
+              "https://tailyai.vercel.app", // need to change in production
               "",
               "width=700,height=500,top=150,left=400"
             );
@@ -155,7 +155,7 @@ const sendTextToServer2 = async () => {
     console.log(jsonifiedText);
     try {
       console.log("starting to post to the server");
-      await fetch("http://localhost:8080/api/v1/openai", {
+      await fetch("https://tailyai.herokuapp.com/api/v1/openai", {
         // change the url at production
         method: "POST",
         mode: "cors",
@@ -181,7 +181,7 @@ const sendTextToServer2 = async () => {
               "Error happend in our servers. A new window will open and dissapear to resolve the issue and then try Generating again"
             );
             var myWindow = window.open(
-              "http://localhost:3000",
+              "https://tailyai.vercel.app",
               "",
               "width=700,height=500,top=150,left=400"
             );
