@@ -1,11 +1,10 @@
 span#moon {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 div#hell {
   width: 200px;
   height: 300px;
-  background-color: rgb(0, 0, 0);
 }
 
 h1#font {
