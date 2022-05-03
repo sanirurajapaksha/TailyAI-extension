@@ -1,6 +1,5 @@
 chrome.storage.sync.get(["user"], (result) => {
   if (result.user) {
-    window.location.replace("index.html");
   } else {
     window.location.replace("login.html");
   }
