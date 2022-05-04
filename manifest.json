@@ -9,8 +9,7 @@
   "permissions": ["storage"],
   "host_permissions": [
     "*://mail.google.com/*",
-    "https://tailyai.herokuapp.com/*",
-    "http://localhost:8080/*"
+    "https://tailyai.herokuapp.com/*"
   ],
   "background": {
     "service_worker": "service_worker.js"

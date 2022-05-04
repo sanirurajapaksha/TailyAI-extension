@@ -1,0 +1,14 @@
+body {
+    width: 235px;
+    height: 300px;
+    background-color: white;
+    flex: content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1#font {
+    font-family: monospace;
+    font-size: 20px;
+}
