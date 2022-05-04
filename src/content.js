@@ -49,7 +49,7 @@ const sendTextToServer1 = async () => {
     try {
       console.log("starting to post to the server");
       await fetch("https://tailyai.herokuapp.com/api/v1/openai", {
-        // change the url at production
+        // change the url at production // done
         method: "POST",
         mode: "cors",
         headers: {
