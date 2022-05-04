@@ -1,6 +1,6 @@
 {
   "name": "TailyAI - Write hassel free emails using AI",
-  "description": "Stop spending time thinking if your emails are convincing, well-written or formal. Just give the idea and let the TailyAI write the whole email",
+  "description": "Don't know how to write a well-written email? TailyAI will write your emails for you",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
