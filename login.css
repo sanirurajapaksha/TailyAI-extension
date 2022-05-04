@@ -1,6 +1,6 @@
 body {
     width: 235px;
-    height: 300px;
+    height: 280px;
     background-color: white;
     flex: content;
     justify-content: center;
@@ -9,6 +9,49 @@ body {
 }
 
 h1#font {
+    padding-top: 50px;
     font-family: monospace;
     font-size: 20px;
+}
+
+div#fontdiv {
+    width: 250px;
+    height: 120px;
+    margin-left: -8px;
+    margin-top: 0px;
+}
+
+h1#tailyai {
+    font-family: monospace;
+    font-size: 40px;
+    color: white;
+}
+
+div#tailyaidiv {
+    background-color: #10b981;
+    height: 50px;
+    width: 250px;
+    margin-left: -8px;
+    margin-top: -28px;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+    box-shadow: 0px 0px 20px 0px #10b981;
+}
+
+a#link {
+    text-decoration-line: none;
+    font-size: 15px;
+    font-family: monospace;
+    color: white;
+    box-shadow: 0px 0px 4px 0px #39d19e;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #10b981;
+}
+
+div#linkdiv {
+    margin-bottom: 90px;
 }

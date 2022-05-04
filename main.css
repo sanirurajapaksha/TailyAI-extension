@@ -7,22 +7,35 @@ body {
   text-align: center;
 }
 
-h1 {
+h1#tailyai {
   font-family: monospace;
-  font-size: 50px;
+  font-size: 40px;
+  color: white;
+}
+
+div#tailyaidiv {
+  background-color: #10b981;
+  height: 50px;
+  width: 250px;
+  margin-left: -8px;
+  margin-top: -28px;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  box-shadow: 0px 0px 20px 0px #10b981;
 }
 
 ul#ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  margin: 30px 10px 10px;
+  margin: 5px 10px 10px;
   padding: 0;
   width: full;
   font-family: monospace;
 }
 
 h2#one {
+  margin-top: 40px;
   font-family: monospace;
   font-size: 15px;
 }
@@ -48,16 +61,16 @@ span {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: -30px;
+  top: -40px;
   left: 110%;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: 70%;
+  top: 85%;
   right: 100%;
   margin-top: -5px;
   border-width: 5px;
@@ -68,4 +81,12 @@ span {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+div#divider {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
 }
