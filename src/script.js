@@ -1,7 +1,7 @@
 chrome.storage.sync.get(["user"], (result) => {
   if (result.user) {
     chrome.storage.sync.get(["email"], (result) => {
-      fetch("https://tailyai.herokuapp.com/api/v1/extension-data/", {
+      fetch("https://tailyai.herokuapp.com/api/v1/extension-data", {
         method: "POST",
         mode: "cors",
         headers: {
