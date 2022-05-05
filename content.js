@@ -3,10 +3,18 @@ let isButtonAdded2 = false;
 
 let isLoggedIn;
 let email;
+let status_available;
 
 chrome.storage.sync.get(["user"], (result) => {
   if (result.user) {
-    isLoggedIn = true;
+    chrome.storage.sync.get(["status"], (result) => {
+      status_available = result.status;
+    });
+
+    if (status_available === "paused") {
+      isLoggedIn = false;
+    }
+
     chrome.storage.sync.get(["email"], (result) => {
       email = result.email;
     });
