@@ -11,7 +11,7 @@ chrome.storage.sync.get(["user"], (result) => {
       status_available = result.status;
     });
 
-    if (status_available === "paused") {
+    if (status_available === "paused" || status_available === "deleted") {
       isLoggedIn = false;
     }
 
