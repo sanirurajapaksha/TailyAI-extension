@@ -3,20 +3,26 @@
   "description": "Don't know how to write a well-written email? TailyAI will write your emails for you",
   "version": "1.0",
   "manifest_version": 3,
+
   "action": {
     "default_popup": "index.html"
   },
+
   "permissions": ["storage"],
+
   "host_permissions": [
     "*://mail.google.com/*",
     "https://tailyai.herokuapp.com/*"
   ],
+
   "background": {
     "service_worker": "service_worker.js"
   },
+
   "externally_connectable": {
-    "matches": ["*://tailyai.vercel.app/*"]
+    "matches": ["*://tailyai.co/*"]
   },
+
   "content_scripts": [
     {
       "matches": ["*://mail.google.com/*"],

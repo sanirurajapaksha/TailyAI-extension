@@ -13,6 +13,8 @@ chrome.storage.sync.get(["user"], (result) => {
 
     if (status_available === "paused" || status_available === "deleted") {
       isLoggedIn = false;
+    } else {
+      isLoggedIn = true;
     }
 
     chrome.storage.sync.get(["email"], (result) => {
