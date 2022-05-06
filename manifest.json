@@ -10,10 +10,7 @@
 
   "permissions": ["storage"],
 
-  "host_permissions": [
-    "*://mail.google.com/*",
-    "https://tailyai.herokuapp.com/*"
-  ],
+  "host_permissions": ["*://mail.google.com/*"],
 
   "background": {
     "service_worker": "service_worker.js"
