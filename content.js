@@ -57,7 +57,6 @@ const sendTextToServer1 = async () => {
     const hehe = { text: trimedText, email: email };
     const jsonifiedText = JSON.stringify(hehe);
     try {
-      console.log("starting to post to the server");
       await fetch("https://tailyai.herokuapp.com/api/v1/openai", {
         // change the url at production // done
         method: "POST",
@@ -162,9 +161,7 @@ const sendTextToServer2 = async () => {
   } else {
     const hehe = { text: trimedText, email: email };
     const jsonifiedText = JSON.stringify(hehe);
-    console.log(jsonifiedText);
     try {
-      console.log("starting to post to the server");
       await fetch("https://tailyai.herokuapp.com/api/v1/openai", {
         // change the url at production
         method: "POST",
