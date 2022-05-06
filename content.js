@@ -84,7 +84,7 @@ const sendTextToServer1 = async () => {
               "Error happend in our servers. A new window will open and dissapear to resolve the issue and then try Generating again"
             );
             var myWindow = window.open(
-              "https://tailyai.vercel.app", // need to change in production
+              "https://tailyai.co", // need to change in production
               "",
               "width=700,height=500,top=150,left=400"
             );
@@ -191,7 +191,7 @@ const sendTextToServer2 = async () => {
               "Error happend in our servers. A new window will open and dissapear to resolve the issue and then try Generating again"
             );
             var myWindow = window.open(
-              "https://tailyai.vercel.app",
+              "https://tailyai.co",
               "",
               "width=700,height=500,top=150,left=400"
             );
