@@ -1,7 +1,7 @@
 {
   "name": "TailyAI - Write hassel free emails using AI",
   "description": "Don't know how to write a well-written email? TailyAI will write your emails for you",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
 
   "action": {
@@ -18,6 +18,13 @@
 
   "externally_connectable": {
     "matches": ["*://tailyai.co/*"]
+  },
+
+  "icons": {
+    "16": "images/icon1.png",
+    "32": "images/icon2.png",
+    "48": "images/icon3.png",
+    "128": "images/icon4.png"
   },
 
   "content_scripts": [
