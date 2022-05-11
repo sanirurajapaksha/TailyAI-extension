@@ -1,7 +1,7 @@
 {
   "name": "TailyAI - Write hassel free emails using AI",
   "description": "Don't know how to write a well-written email? TailyAI will write your emails for you",
-  "version": "1.2",
+  "version": "1.3",
   "manifest_version": 3,
 
   "action": {
