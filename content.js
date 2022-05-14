@@ -57,15 +57,18 @@ const sendTextToServer1 = async () => {
     const hehe = { text: trimedText, email: email };
     const jsonifiedText = JSON.stringify(hehe);
     try {
-      await fetch("https://tailyai.onrender.com/api/v1/openai", {
-        // change the url at production // done
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: jsonifiedText,
-      })
+      await fetch(
+        "https://tailyai-server-production.up.railway.app/api/v1/openai",
+        {
+          // change the url at production // done
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: jsonifiedText,
+        }
+      )
         .then((res) => res.text())
         .then((data) => {
           if (data === "toxic") {
@@ -162,15 +165,18 @@ const sendTextToServer2 = async () => {
     const hehe = { text: trimedText, email: email };
     const jsonifiedText = JSON.stringify(hehe);
     try {
-      await fetch("https://tailyai.onrender.com/api/v1/openai", {
-        // change the url at production
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: jsonifiedText,
-      })
+      await fetch(
+        "https://tailyai-server-production.up.railway.app/api/v1/openai",
+        {
+          // change the url at production
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: jsonifiedText,
+        }
+      )
         .then((res) => res.text())
         .then((data) => {
           if (data === "toxic") {
