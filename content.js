@@ -54,13 +54,12 @@ const sendTextToServer1 = async () => {
       .querySelector("div.divForRoot1")
       .shadowRoot.querySelector("span.text-content1").innerHTML = "Generate✨";
   } else {
-    const hehe = { text: trimedText, email: email };
+    const hehe = { text: trimedText, email: email, type: "direct" };
     const jsonifiedText = JSON.stringify(hehe);
     try {
       await fetch(
         "https://tailyai-server-production.up.railway.app/api/v1/openai",
         {
-          // change the url at production // done
           method: "POST",
           mode: "cors",
           headers: {
@@ -162,13 +161,12 @@ const sendTextToServer2 = async () => {
       .querySelector("div.divForRoot2")
       .shadowRoot.querySelector("span.text-content2").innerHTML = "Generate✨";
   } else {
-    const hehe = { text: trimedText, email: email };
+    const hehe = { text: trimedText, email: email, type: "reply" };
     const jsonifiedText = JSON.stringify(hehe);
     try {
       await fetch(
         "https://tailyai-server-production.up.railway.app/api/v1/openai",
         {
-          // change the url at production
           method: "POST",
           mode: "cors",
           headers: {
