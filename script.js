@@ -1,5 +1,5 @@
 chrome.storage.sync.get(["user"], (result) => {
-  if (result.user) {
+  if (result.user === false) {
     chrome.storage.sync.get(["email"], (result) => {
       fetch(
         "https://tailyai-server-production.up.railway.app/api/v1/extension-data",
@@ -19,7 +19,9 @@ chrome.storage.sync.get(["user"], (result) => {
             data.available_genarations;
         });
     });
-  } else {
+  } else if (result.user === true) {
     window.location.replace("login.html");
   }
 });
+
+// change the shit when ready to release
